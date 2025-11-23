@@ -801,5 +801,9 @@ blockquote {
     transform: translateX(-100%);
   }
 }
-
+.marquee-content {
+  display: inline-block;
+  animation: marquee 12s linear infinite;
+  will-change: transform;
+}
 
