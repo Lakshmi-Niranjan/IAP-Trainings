@@ -806,4 +806,7 @@ blockquote {
   animation: marquee 12s linear infinite;
   will-change: transform;
 }
+.marquee-content {
+  animation-delay: 0s;
+}
 
