@@ -16,7 +16,6 @@
 }
 
 /* Global */
-
 *,
 *::before,
 *::after {
@@ -32,6 +31,7 @@ body {
   background: radial-gradient(circle at top, #020617 0, #020617 40%, #020617);
   color: var(--text-main);
   scroll-behavior: smooth;
+  font-size: 16px;
 }
 
 body {
@@ -41,6 +41,14 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+  outline-offset: 2px;
+}
+
+/* Focus states */
+a:focus,
+button:focus {
+  outline: 2px solid var(--primary);
+  outline-offset: 3px;
 }
 
 img {
@@ -56,7 +64,6 @@ img {
 }
 
 /* Header */
-
 .site-header {
   position: fixed;
   top: 0;
@@ -91,6 +98,7 @@ img {
   justify-content: center;
   font-weight: 700;
   font-size: 0.9rem;
+  color: white;
 }
 
 .logo-name {
@@ -127,11 +135,13 @@ img {
   transition: width 0.2s ease-out;
 }
 
-.nav a:hover {
+.nav a:hover,
+.nav a:focus-visible {
   color: var(--text-main);
 }
 
-.nav a:hover::after {
+.nav a:hover::after,
+.nav a:focus-visible::after {
   width: 100%;
 }
 
@@ -142,10 +152,10 @@ img {
   color: var(--text-main);
   font-size: 1.3rem;
   cursor: pointer;
+  user-select: none;
 }
 
 /* Hero */
-
 .hero {
   padding: 56px 0 40px;
   background: radial-gradient(circle at 0 0, #1e293b 0, #020617 48%);
@@ -187,10 +197,9 @@ img {
   max-width: 720px;
 }
 
-/* Mobile optimisation */
 @media (max-width: 768px) {
   .hero-subtext {
-    text-align: left;   /* Prevent uneven spacing on small screens */
+    text-align: left;
     line-height: 1.5;
   }
 }
@@ -218,20 +227,24 @@ img {
 .btn.primary {
   background: linear-gradient(135deg, var(--primary), #4f46e5);
   box-shadow: 0 18px 45px rgba(37, 99, 235, 0.56);
+  color: white;
 }
 
 .btn.ghost {
   background: rgba(15, 23, 42, 0.9);
   border-color: rgba(148, 163, 184, 0.35);
+  color: var(--text-main);
 }
 
 .btn.full-width {
   width: 100%;
 }
 
-.btn:hover {
+.btn:hover,
+.btn:focus-visible {
   transform: translateY(-1px);
   box-shadow: 0 14px 32px rgba(15, 23, 42, 0.7);
+  outline: none;
 }
 
 .hero-meta {
@@ -252,8 +265,7 @@ img {
   border: 1px solid rgba(148, 163, 184, 0.35);
 }
 
-/* Hero – right profile card */
-
+/* Hero right profile card */
 .hero-right {
   display: flex;
   justify-content: flex-end;
@@ -268,10 +280,7 @@ img {
   max-width: 320px;
   text-align: center;
   margin-left: auto;
-  margin-right: 0;
 }
-
-/* ROUND PROFILE IMAGE – 200px */
 
 .profile-photo-ring {
   width: 200px;
@@ -318,16 +327,19 @@ img {
   justify-content: center;
   background: rgba(15, 23, 42, 0.9);
   border: 1px solid rgba(148, 163, 184, 0.5);
+  color: var(--text-main);
+  transition: border-color 0.3s ease;
 }
 
-.profile-icons a:hover {
+.profile-icons a:hover,
+.profile-icons a:focus-visible {
   border-color: var(--primary);
+  outline: none;
 }
 
 /* Sections */
-
 .section {
-  padding: 52px 0;
+  padding: 48px 0;
   background: radial-gradient(circle at top left, #020617 0, #020617 60%);
 }
 
@@ -336,12 +348,13 @@ img {
 }
 
 .section-title {
-  font-size: 1.5rem;
-  margin: 0 0 28px;
+  font-size: 1.4rem;
+  margin: 0 0 16px;
   position: relative;
   display: inline-flex;
   align-items: center;
   gap: 10px;
+  color: var(--text-main);
 }
 
 .section-title::after {
@@ -353,7 +366,6 @@ img {
 }
 
 /* Grid helpers */
-
 .grid {
   display: grid;
   gap: 24px;
@@ -364,14 +376,13 @@ img {
 }
 
 /* About */
-
 .about-section {
-  padding: 80px 20px;
+  padding: 56px 20px;
 }
 
 .about-container {
   max-width: 900px;
-  margin: 0 auto;          /* centers heading + text together */
+  margin: 0 auto;
 }
 
 .about-heading {
@@ -380,77 +391,151 @@ img {
   text-align: left;
 }
 
-/* paragraph */
 .about-text {
   text-align: justify;
   text-justify: inter-word;
-  line-height: 1.7;
-  font-size: 16px;
+  line-height: 1.6;
+  font-size: 15px;
 }
 
-/* mobile */
 @media (max-width: 768px) {
   .about-heading {
     font-size: 24px;
   }
   .about-text {
     text-align: left;
-    line-height: 1.6;
-    font-size: 15px;
+    line-height: 1.5;
+    font-size: 14px;
   }
 }
 
-
-/* Skills / Expertise */
-
+/* Expertise Grid */
 .expertise-grid-new {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-  margin-top: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-top: 14px;
 }
 
 .expertise-card {
-  background: linear-gradient(145deg, #0e1628, #0a1020);
-  padding: 18px;
-  min-height: 150px;
-  border-radius: 16px;
-  border: 1px solid rgba(255,255,255,0.08);
-  transition: all 0.3s ease;
+  background: linear-gradient(145deg, #0b1220, #050816);
+  padding: 14px 14px 12px;
+  min-height: 115px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  transition: transform 0.2s ease, border-color 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
-.expertise-card:hover {
-  transform: translateY(-6px);
+.expertise-card:hover,
+.expertise-card:focus-within {
+  transform: translateY(-4px);
   border-color: #4f7cff;
+  box-shadow: 0 10px 26px rgba(15, 23, 42, 0.7);
+  outline: none;
 }
 
 .expertise-card h3 {
-  margin-bottom: 8px;
-  font-size: 18px;
+  margin-bottom: 4px;
+  font-size: 0.95rem;
   color: #ffffff;
 }
 
 .expertise-card p {
-  font-size: 14px;
-  line-height: 1.5;
-  color: #b8c2e0;
+  font-size: 0.82rem;
+  line-height: 1.4;
+  color: #c4c9e5;
 }
 
+/* Programs List */
+.programs-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
 
-/* Testimonials simple style */
+.programs-list li {
+  background: linear-gradient(145deg, #0b1220, #050816);
+  padding: 16px 18px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
 
-blockquote {
+.programs-list h3 {
+  margin: 0 0 6px;
+  font-size: 1rem;
+  color: var(--text-main);
+}
+
+.programs-list p {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--text-muted);
+}
+
+@media (max-width: 768px) {
+  .programs-list li {
+    padding: 14px;
+  }
+
+  .programs-list h3 {
+    font-size: 0.95rem;
+  }
+}
+
+/* Testimonials Marquee */
+.testimonials-marquee {
+  overflow: hidden;
+  margin-top: 10px;
+  position: relative;
+}
+
+.marquee-track {
+  display: flex;
+  gap: 18px;
+  width: max-content;
+  animation: testimonials-scroll 48s linear infinite;
+}
+
+.testimonials-marquee:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+.testimonials-marquee blockquote {
+  min-width: 320px;
+  max-width: 420px;
+  flex-shrink: 0;
+  white-space: normal;
   background: rgba(15, 23, 42, 0.95);
   border-radius: var(--radius-lg);
-  padding: 16px 14px;
+  padding: 12px 12px;
   border-left: 3px solid var(--primary);
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   color: var(--text-muted);
-  margin: 0 0 16px;
+  margin: 0 0 12px;
+}
+
+@media (max-width: 768px) {
+  .testimonials-marquee blockquote {
+    min-width: 260px;
+    max-width: 320px;
+  }
+}
+
+@keyframes testimonials-scroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
 /* Contact */
-
 .contact-list {
   list-style: none;
   padding: 0;
@@ -464,7 +549,6 @@ blockquote {
 }
 
 /* Footer */
-
 .footer,
 .site-footer {
   border-top: 1px solid rgba(148, 163, 184, 0.25);
@@ -476,7 +560,6 @@ blockquote {
 }
 
 /* Floating WhatsApp */
-
 .whatsapp-float {
   position: fixed;
   right: 18px;
@@ -491,10 +574,17 @@ blockquote {
   font-size: 1.4rem;
   color: #fff;
   box-shadow: 0 14px 32px rgba(22, 163, 74, 0.7);
+  transition: background 0.3s ease;
+}
+
+.whatsapp-float:hover,
+.whatsapp-float:focus {
+  background: #16a34a;
+  outline: none;
+  cursor: pointer;
 }
 
 /* Responsive */
-
 @media (max-width: 900px) {
   body {
     padding-top: 64px;
@@ -523,6 +613,7 @@ blockquote {
     transform: translateY(0);
     opacity: 1;
     pointer-events: auto;
+    transition: transform 0.2s ease, opacity 0.2s ease;
   }
 
   .menu-toggle {
@@ -536,10 +627,6 @@ blockquote {
   .hero-right {
     justify-content: flex-start;
   }
-
-  .skills-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
 }
 
 @media (max-width: 640px) {
@@ -547,266 +634,3 @@ blockquote {
     grid-template-columns: minmax(0, 1fr);
   }
 }
-.section {
-  padding: 80px 20px;
-}
-
-/* Common container for alignment */
-.section-container {
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-/* Headings */
-.section-title {
-  font-size: 32px;
-  margin-bottom: 20px;
-}
-
-/* About paragraph */
-.about-text {
-  text-align: justify;
-  text-justify: inter-word;
-  line-height: 1.7;
-  font-size: 16px;
-}
-
-/* Mobile fix */
-@media (max-width: 768px) {
-  .section-title {
-    font-size: 24px;
-  }
-  .about-text {
-    text-align: left;
-  }
-}
-/* =========================
-   Tighter section spacing
-   ========================= */
-.section {
-  padding: 48px 0;          /* was 80 / 52 – reduced */
-}
-
-.about-section {
-  padding: 56px 20px;       /* was 80 – reduced */
-}
-
-.section + .section,
-.section + .about-section,
-.about-section + .section {
-  margin-top: -10px;        /* pulls sections closer visually */
-}
-
-/* Headings – slightly tighter */
-.section-title {
-  font-size: 1.4rem;        /* a bit smaller */
-  margin: 0 0 16px;         /* was 20+ – reduced gap */
-}
-
-/* Paragraphs – slightly tighter line height */
-.about-text {
-  text-align: justify;
-  text-justify: inter-word;
-  line-height: 1.6;         /* was 1.7 */
-  font-size: 15px;
-}
-
-/* Mobile spacing */
-@media (max-width: 768px) {
-  .section {
-    padding: 32px 16px;     /* much tighter on mobile */
-  }
-
-  .about-section {
-    padding: 40px 16px;
-  }
-
-  .section-title {
-    font-size: 1.2rem;
-    margin-bottom: 14px;
-  }
-
-  .about-text {
-    text-align: left;
-    line-height: 1.5;
-  }
-}
-
-/* =========================
-   Compact expertise grid UI
-   ========================= */
-.expertise-grid-new {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* smaller cards */
-  gap: 16px;                              /* was 20px */
-  margin-top: 14px;                       /* tighter */
-}
-
-.expertise-card {
-  background: linear-gradient(145deg, #0b1220, #050816);
-  padding: 14px 14px 12px;                /* was 18px */
-  min-height: 115px;                      /* was 150px */
-  border-radius: 12px;                    /* smaller radius */
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  transition: transform 0.2s ease, border-color 0.2s ease,
-              box-shadow 0.2s ease;
-}
-
-.expertise-card:hover {
-  transform: translateY(-4px);            /* reduced hover lift */
-  border-color: #4f7cff;
-  box-shadow: 0 10px 26px rgba(15, 23, 42, 0.7);
-}
-
-.expertise-card h3 {
-  margin-bottom: 4px;                     /* was 8px */
-  font-size: 0.95rem;                     /* ~15px */
-}
-
-.expertise-card p {
-  font-size: 0.82rem;                     /* ~13px */
-  line-height: 1.4;                       /* was 1.5 */
-  color: #c4c9e5;
-}
-
-/* Optional: tighter testimonials too */
-blockquote {
-  padding: 12px 12px;
-  font-size: 0.8rem;
-  margin: 0 0 12px;
-}
-/* Programs list layout */
-
-.programs-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-}
-
-.programs-list li {
-  background: linear-gradient(145deg, #0b1220, #050816);
-  padding: 16px 18px;
-  border-radius: 14px;
-  border: 1px solid rgba(255,255,255,0.06);
-}
-
-.programs-list h3 {
-  margin: 0 0 6px;
-  font-size: 1rem;
-}
-
-.programs-list p {
-  margin: 0;
-  font-size: 0.9rem;
-  line-height: 1.5;
-  color: var(--text-muted);
-}
-
-/* Mobile optimisation */
-@media (max-width: 768px) {
-  .programs-list li {
-    padding: 14px;
-  }
-
-  .programs-list h3 {
-    font-size: 0.95rem;
-  }
-}
-/* ===== Testimonials Marquee ===== */
-
-.testimonials-marquee {
-  overflow: hidden;
-  margin-top: 10px;
-  position: relative;
-}
-
-.marquee-track {
-  display: inline-flex;
-  gap: 18px;
-  white-space: nowrap;
-  animation: testimonials-scroll 20s linear infinite;
-}
-
-/* Pause on hover */
-.testimonials-marquee:hover .marquee-track {
-  animation-play-state: paused;
-}
-
-/* Cards in horizontal layout */
-.testimonials-marquee blockquote {
-  min-width: 320px;
-  max-width: 420px;
-  white-space: normal;
-  flex-shrink: 0;
-}
-
-/* Mobile optimisation */
-@media (max-width: 768px) {
-  .testimonials-marquee blockquote {
-    min-width: 260px;
-    max-width: 320px;
-  }
-}
-
-/* Animation */
-@keyframes testimonials-scroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-/* ===== Testimonials Marquee – Simple Working Version ===== */
-
-.testimonials-marquee {
-  overflow: hidden;
-  margin-top: 10px;
-  position: relative;
-}
-
-.marquee-track {
-  display: flex;
-  gap: 18px;
-  width: max-content;                 /* allow track to be wider than container */
-  animation: testimonials-scroll 48s linear infinite;
-}
-
-/* Pause on hover */
-.testimonials-marquee:hover .marquee-track {
-  animation-play-state: paused;
-}
-
-/* Reuse your existing blockquote style, just tweak for row layout */
-.testimonials-marquee blockquote {
-  min-width: 320px;
-  max-width: 420px;
-  flex-shrink: 0;
-  white-space: normal;                /* text wraps inside card */
-}
-
-/* Mobile optimisation */
-@media (max-width: 768px) {
-  .testimonials-marquee blockquote {
-    min-width: 260px;
-    max-width: 320px;
-  }
-}
-
-/* Animation: move from right to left fully */
-@keyframes testimonials-scroll {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
-.marquee-content {
-  display: inline-block;
-  animation: marquee 12s linear infinite;
-  will-change: transform;
-}
-.marquee-content {
-  animation-delay: 0s;
-}
-
