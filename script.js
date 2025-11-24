@@ -30,3 +30,15 @@ document.addEventListener("DOMContentLoaded", function () {
     marqueeTrack.style.animationPlayState = 'running';
   }
 });
+const marquee = document.querySelector('.marquee-track');
+const wrapper = document.querySelector('.testimonials-marquee');
+
+if (marquee && wrapper) {
+  wrapper.addEventListener('mouseenter', () => {
+    marquee.style.animationPlayState = 'paused';
+  });
+
+  wrapper.addEventListener('mouseleave', () => {
+    marquee.style.animationPlayState = 'running';
+  });
+}
