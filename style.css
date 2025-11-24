@@ -119,3 +119,90 @@ img {
     line-height: 1.6;
   }
 }
+/* =========================
+   CORE EXPERTISE (PORTFOLIO STYLE)
+   ========================= */
+
+/* Section spacing + background stays consistent */
+#expertise.section {
+  padding: 60px 0;
+}
+
+/* Left-aligned heading like your old portfolio */
+#expertise .section-title {
+  text-align: left;
+  margin-bottom: 22px;
+}
+
+/* Responsive grid - behaves like a portfolio */
+.expertise-grid-new {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 22px;
+  margin-top: 10px;
+}
+
+/* Card style: blue, soft glow, portfolio feel */
+.expertise-card {
+  position: relative;
+  padding: 18px 20px;
+  border-radius: 18px;
+  background: radial-gradient(circle at top left, #111827 0, #020617 65%);
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.65);
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+/* Subtle gradient edge like your old theme */
+.expertise-card::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  background: radial-gradient(circle at 0 0,
+    rgba(59, 130, 246, 0.6),
+    transparent 55%);
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/* Content sits above gradient layer */
+.expertise-card * {
+  position: relative;
+  z-index: 1;
+}
+
+.expertise-card h3 {
+  margin: 0 0 6px;
+  font-size: 1rem;
+  color: #e5e7eb;
+}
+
+.expertise-card p {
+  margin: 0;
+  font-size: 0.86rem;
+  line-height: 1.5;
+  color: #9ca3af;
+}
+
+/* Hover – slight lift + brighter border */
+.expertise-card:hover {
+  transform: translateY(-4px);
+  border-color: #4f46e5;
+  box-shadow: 0 22px 48px rgba(15, 23, 42, 0.8);
+}
+
+/* Mobile tweaks */
+@media (max-width: 768px) {
+  .expertise-grid-new {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
+  }
+
+  .expertise-card {
+    padding: 16px 16px;
+    border-radius: 16px;
+  }
+}
+
