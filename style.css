@@ -611,3 +611,12 @@ blockquote {
     max-width: 320px;
   }
 }
+/* FULL PROOF pause on hover */
+.testimonials-marquee {
+  overflow: hidden;
+  position: relative;
+}
+
+.testimonials-marquee:hover .marquee-track {
+  animation-play-state: paused !important;
+}
