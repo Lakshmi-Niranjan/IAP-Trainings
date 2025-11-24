@@ -620,3 +620,13 @@ blockquote {
 .testimonials-marquee:hover .marquee-track {
   animation-play-state: paused !important;
 }
+/* Force uniform heading alignment across all sections */
+.section .section-container {
+  padding-left: 0 !important;
+}
+
+/* Ensure marquee doesn't visually push content */
+.testimonials-marquee {
+  margin-left: 0 !important;
+}
+
