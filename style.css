@@ -48,17 +48,9 @@ img {
   display: block;
 }
 
-/* containers */
+/* containers – unified */
 
-.container {
-  width: 100%;
-  max-width: 1120px;
-  margin: 0 auto;
-  padding: 0 16px;
-}
-
-/* unified section container for all sections */
-
+.container,
 .section-container {
   width: 100%;
   max-width: 1120px;
@@ -240,24 +232,6 @@ img {
   box-shadow: 0 14px 32px rgba(15, 23, 42, 0.7);
 }
 
-.hero-meta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  font-size: 0.8rem;
-  color: var(--text-muted);
-}
-
-.hero-meta span {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 4px 10px;
-  border-radius: 999px;
-  background: rgba(15, 23, 42, 0.8);
-  border: 1px solid rgba(148, 163, 184, 0.35);
-}
-
 /* Hero – right profile card */
 
 .hero-right {
@@ -313,19 +287,35 @@ img {
   font-size: 1rem;
 }
 
+/* Brand icons */
+
 .profile-icons a {
-  width: 32px;
-  height: 32px;
-  border-radius: 999px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   background: rgba(15, 23, 42, 0.9);
   border: 1px solid rgba(148, 163, 184, 0.5);
+  font-size: 1rem;
+}
+
+.profile-icons .gmail i {
+  color: #ea4335;
+}
+
+.profile-icons .whatsapp i {
+  color: #25d366;
+}
+
+.profile-icons .linkedin i {
+  color: #0a66c2;
 }
 
 .profile-icons a:hover {
-  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.08),
+    0 6px 18px rgba(0, 0, 0, 0.5);
 }
 
 /* Sections */
@@ -483,10 +473,9 @@ blockquote {
   animation: testimonials-scroll 85s linear infinite;
 }
 
-/* Pause on hover – FIXED */
-.testimonials-marquee:hover .marquee-track,
-.marquee-track:hover {
-  animation-play-state: paused;
+/* Pause on hover */
+.testimonials-marquee:hover .marquee-track {
+  animation-play-state: paused !important;
 }
 
 .testimonials-marquee blockquote {
@@ -494,6 +483,25 @@ blockquote {
   max-width: 420px;
   flex-shrink: 0;
   white-space: normal;
+}
+
+/* Author format inside testimonials */
+.testimonials-marquee blockquote strong {
+  display: block;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 2px;
+}
+
+.testimonials-marquee blockquote span {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+}
+
+.testimonials-marquee blockquote p {
+  margin: 0;
 }
 
 /* Animation */
@@ -611,84 +619,31 @@ blockquote {
     max-width: 320px;
   }
 }
-/* FULL PROOF pause on hover */
-.testimonials-marquee {
-  overflow: hidden;
-  position: relative;
-}
 
-.testimonials-marquee:hover .marquee-track {
-  animation-play-state: paused !important;
-}
-/* Force uniform heading alignment across all sections */
-.section .section-container {
-  padding-left: 0 !important;
-}
-
-/* Ensure marquee doesn't visually push content */
-.testimonials-marquee {
-  margin-left: 0 !important;
-}
-.profile-icons a {
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(15, 23, 42, 0.9);
-  border: 1px solid rgba(148, 163, 184, 0.5);
-  font-size: 1rem;
-}
-
-/* Brand colours */
-.profile-icons .gmail i {
-  color: #EA4335;
-}
-
-.profile-icons .whatsapp i {
-  color: #25D366;
-}
-
-.profile-icons .linkedin i {
-  color: #0A66C2;
-}
-
-/* Hover glow */
-.profile-icons a:hover {
-  box-shadow: 0 0 0 2px rgba(255,255,255,0.08),
-              0 6px 18px rgba(0,0,0,0.5);
-}
-/* ==== HERO DESKTOP TUNING – KEEP MOBILE SAME ==== */
+/* HERO DESKTOP TUNING – desktop only */
 @media (min-width: 1024px) {
-
-  /* make hero area start closer to header */
   .hero {
-    padding-top: 40px;              /* less top space than original */
+    padding-top: 40px;
   }
 
-  /* allow more width so heading stretches till right */
   .hero .container {
-    max-width: 1280px;              /* wider hero only */
+    max-width: 1280px;
   }
 
-  /* give more width to text side, keep photo side decent */
   .hero-inner {
     grid-template-columns: minmax(0, 2.4fr) minmax(0, 1.2fr);
     align-items: center;
   }
 
-  /* slightly bigger, tighter heading so lines reach yellow area */
   .hero h1 {
     font-size: 2.4rem;
     line-height: 1.12;
   }
 
   .hero-subtext {
-    max-width: 780px;               /* little more width for paragraph too */
+    max-width: 780px;
   }
 
-  /* bigger photo section (card + image + icons) */
   .profile-card {
     max-width: 380px;
     padding: 24px 22px 22px;
@@ -705,5 +660,3 @@ blockquote {
     font-size: 1.05rem;
   }
 }
-
-
