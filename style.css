@@ -501,7 +501,7 @@ blockquote {
 /* Animation */
 @keyframes testimonials-scroll {
   0% {
-    transform: translateX(100%);
+    transform: translateX(0);
   }
   100% {
     transform: translateX(-100%);
@@ -621,7 +621,8 @@ blockquote {
 }
 
 .testimonials-marquee:hover .marquee-track {
-  animation-play-state: paused !important;
+  animation-play-state: running;
+  animation-delay: 0s;
 }
 
 /* ❌ REMOVED THIS: .section .section-container { padding-left: 0 !important; } */
