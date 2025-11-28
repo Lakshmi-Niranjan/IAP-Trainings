@@ -660,3 +660,32 @@ blockquote {
     font-size: 1.05rem;
   }
 }
+/* === HERO ALIGNMENT FIX === */
+@media (min-width: 1024px) {
+  /* make hero same width as header & sections */
+  .hero .container {
+    max-width: 1120px;
+  }
+}
+@media (min-width: 1024px) {
+  .hero .container {
+    max-width: 1120px;
+  }
+
+  /* slightly more space for photo side */
+  .hero-inner {
+    grid-template-columns: minmax(0, 2.2fr) minmax(0, 1.4fr);
+  }
+
+  /* bigger card & photo */
+  .profile-card {
+    max-width: 400px;
+    padding: 26px 24px 22px;
+  }
+
+  .profile-photo-ring {
+    width: 230px;
+    height: 230px;
+  }
+}
+
