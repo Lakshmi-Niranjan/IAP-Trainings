@@ -25,8 +25,9 @@
       text-align: center;
     }
 
+    /* Photo */
     .launch-photo {
-      margin-bottom: 20px;
+      margin-bottom: 26px;
     }
 
     .launch-photo img {
@@ -35,34 +36,50 @@
       object-fit: cover;
       border-radius: 18px;
       border: 2px solid rgba(148,163,184,0.35);
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.8);
     }
 
-    .welcome-text {
-      font-size: 1.4rem;
-      font-weight: 500;
-      margin-bottom: 10px;
+    /* Heading */
+    .welcome-title {
+      font-size: 1.6rem;
+      font-weight: 600;
+      line-height: 1.45;
+      margin: 0 0 12px;
+      letter-spacing: 0.3px;
+    }
+
+    .name-highlight {
+      background: linear-gradient(120deg, #60a5fa, #F3FFA3);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 700;
     }
 
     .welcome-subtext {
-      font-size: 0.95rem;
+      font-size: 0.9rem;
       color: #9ca3af;
-      margin-bottom: 32px;
+      margin-bottom: 30px;
     }
 
+    /* CTA buttons */
     .cta-buttons {
-       display: flex;
-       gap: 16px;
-       justify-content: center;
-       margin-top: 12px;
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      margin-top: 12px;
     }
 
     .cta-btn {
-      width: 170px;          /* reduced width */
-      padding: 11px 0;       /* reduced height */
-      font-size: 0.88rem;    /* slightly smaller text */
-      border-radius: 999px;
+      width: 170px;
+      padding: 11px 0;
+      font-size: 0.88rem;
       font-weight: 500;
+      border-radius: 999px;
       cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
       transition: transform 0.15s ease, box-shadow 0.15s ease;
     }
 
@@ -73,34 +90,46 @@
     }
 
     .cta-it:hover {
-       transform: translateY(-2px);
-      background: rgba(30, 41, 59, 0.9);
+      transform: translateY(-2px);
+      box-shadow: 0 22px 46px rgba(37, 99, 235, 0.6);
     }
 
     .cta-training {
-      background: linear-gradient(135deg, #2563eb, #4f46e5);
+      background: linear-gradient(135deg, #0f172a, #020617);
       color: #ffffff;
-      box-shadow: 0 18px 40px rgba(37, 99, 235, 0.45);
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.65);
     }
 
+    /* Common border for contrast */
     .cta-it,
     .cta-training {
-     border: 1.5px solid rgba(243, 255, 163, 0.55);
-   }
+      border: 1.5px solid rgba(243, 255, 163, 0.55);
+    }
 
     .cta-training:hover {
       transform: translateY(-2px);
-      background: rgba(30, 41, 59, 0.9);
+      box-shadow: 0 22px 46px rgba(15, 23, 42, 0.8);
+    }
+
+    @media (max-width: 520px) {
+      .cta-buttons {
+        flex-direction: column;
+      }
+
+      .cta-btn {
+        width: 100%;
+        max-width: 260px;
+      }
     }
 
     @media (max-width: 480px) {
-      .welcome-text {
-        font-size: 1.2rem;
+      .welcome-title {
+        font-size: 1.3rem;
       }
 
       .launch-photo img {
-        width: 120px;
-        height: 120px;
+        width: 130px;
+        height: 130px;
       }
     }
   </style>
@@ -117,21 +146,19 @@
 
     <!-- WELCOME TEXT -->
     <h1 class="welcome-title">
-  Hi, Welcome to <span class="name-highlight">Lakshmi Niranjan's</span> Professional Space
-</h1>
+      Hi, Welcome to
+      <span class="name-highlight">Lakshmi Niranjan</span>'s
+      Professional Space
+    </h1>
+
     <div class="welcome-subtext">
       Please select the profile that you would like to explore.
     </div>
 
     <!-- CTA BUTTONS -->
     <div class="cta-buttons">
-      <a href="it-profile.html">
-        <button class="cta-btn cta-it">IT Profile</button>
-      </a>
-
-      <a href="index.html">
-        <button class="cta-btn cta-training">Training Profile</button>
-      </a>
+      <a href="it-profile.html" class="cta-btn cta-it">IT Profile</a>
+      <a href="index.html" class="cta-btn cta-training">Training Profile</a>
     </div>
 
   </div>
