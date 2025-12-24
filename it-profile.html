@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>IT Profile | Lakshmi Niranjan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background: #020617;
+      color: #f9fafb;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    /* HEADER */
+
+    header {
+      position: sticky;
+      top: 0;
+      background: rgba(2, 6, 23, 0.9);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(148,163,184,0.2);
+      z-index: 10;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 64px;
+    }
+
+    .nav a {
+      font-size: 0.85rem;
+      color: #cbd5f5;
+      margin-left: 18px;
+    }
+
+    /* HERO */
+
+    .hero {
+      padding: 56px 0;
+    }
+
+    .hero-inner {
+      display: grid;
+      grid-template-columns: 150px 1fr;
+      gap: 32px;
+      align-items: center;
+    }
+
+    .hero-photo img {
+      width: 140px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 18px;
+      border: 2px solid rgba(148,163,184,0.3);
+    }
+
+    .hero h1 {
+      margin: 0 0 8px;
+      font-size: 2rem;
+    }
+
+    .hero-role {
+      font-size: 1rem;
+      color: #F3FFA3;
+      margin-bottom: 10px;
+      font-weight: 500;
+    }
+
+    .hero-summary {
+      font-size: 0.9rem;
+      color: #9ca3af;
+      line-height: 1.6;
+      max-width: 720px;
+    }
+
+    /* SECTION */
+
+    section {
+      padding: 48px 0;
+      border-top: 1px solid rgba(148,163,184,0.15);
+    }
+
+    section h2 {
+      font-size: 1.4rem;
+      margin-bottom: 24px;
+      color: #e5e7eb;
+    }
+
+    /* FOOTER */
+
+    footer {
+      padding: 20px 0;
+      text-align: center;
+      font-size: 0.75rem;
+      color: #9ca3af;
+      border-top: 1px solid rgba(148,163,184,0.15);
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 768px) {
+      .hero-inner {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .hero-photo img {
+        margin: 0 auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="container nav">
+      <strong>Lakshmi Niranjan</strong>
+      <div>
+        <a href="index.html">IAP Profile</a>
+        <a href="it-profile.html">IT Profile</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-inner">
+
+      <!-- PHOTO -->
+      <div class="hero-photo">
+        <img src="images/Lak.jpg" alt="Lakshmi Niranjan">
+      </div>
+
+      <!-- SUMMARY -->
+      <div>
+        <h1>Lakshmi Niranjan</h1>
+        <div class="hero-role">
+          Senior Business Analyst | BFSI | Capital Markets | Wealth Management
+        </div>
+        <p class="hero-summary">
+          IT professional with 10+ years of experience in BFSI and capital markets
+          domains, specializing in wealth management platforms, functional analysis,
+          UAT, stakeholder management, and regulatory-driven systems.
+          Strong exposure to end-to-end SDLC, business process optimization,
+          and data-driven decision support.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CORE IT EXPERTISE -->
+  <section id="it-expertise">
+    <div class="container">
+      <h2>Core IT Expertise</h2>
+      <!-- cards will come here -->
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="it-experience">
+    <div class="container">
+      <h2>Professional Experience</h2>
+      <!-- timeline will come here -->
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="it-projects">
+    <div class="container">
+      <h2>Key Projects & Contributions</h2>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section id="it-certifications">
+    <div class="container">
+      <h2>Certifications & Credentials</h2>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="it-contact">
+    <div class="container">
+      <h2>Contact</h2>
+      <p>Email: <strong>lkniranjan8@gmail.com</strong></p>
+      <p>LinkedIn: <strong>linkedin.com/in/niftyniru</strong></p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    © Lakshmi Niranjan | IT Profile
+  </footer>
+
+</body>
+</html>
