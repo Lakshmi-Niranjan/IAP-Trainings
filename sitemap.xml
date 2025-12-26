@@ -2,39 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <url>
-    <loc>https://lakshmi-niranjan.github.io/IAP-Trainings/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
+    <loc>https://lakshmi-niranjan.github.io/Professional-Space/launchpage.html</loc>
+    <lastmod>2025-01-26</lastmod>
+    <priority>1.00</priority>
   </url>
 
   <url>
-    <loc>https://lakshmi-niranjan.github.io/IAP-Trainings/#about</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://lakshmi-niranjan.github.io/Professional-Space/index.html</loc>
+    <lastmod>2025-01-26</lastmod>
+    <priority>0.90</priority>
   </url>
 
   <url>
-    <loc>https://lakshmi-niranjan.github.io/IAP-Trainings/#expertise</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://lakshmi-niranjan.github.io/Professional-Space/it-profile.html</loc>
+    <lastmod>2025-01-26</lastmod>
+    <priority>0.90</priority>
   </url>
 
   <url>
-    <loc>https://lakshmi-niranjan.github.io/IAP-Trainings/#programs</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://lakshmi-niranjan.github.io/IAP-Trainings/#testimonials</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://lakshmi-niranjan.github.io/IAP-Trainings/#contact</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://lakshmi-niranjan.github.io/Professional-Space/gallery.html</loc>
+    <lastmod>2025-01-26</lastmod>
+    <priority>0.80</priority>
   </url>
 
 </urlset>
