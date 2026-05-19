@@ -1,19 +1,280 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <title>Welcome | Lakshmi Niranjan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Lakshmi Niranjan is a Senior Business Analyst with 11+ years of experience in BFSI, Capital Markets and Wealth Management, specializing in business analysis, UAT, regulatory systems, and financial technology platforms.">
 
-<title>Lakshmi Niranjan | Professional Space</title>
+  <link rel="canonical" href="https://lakshmi-niranjan.github.io/Professional-Space/launchpage.html">
 
-<link rel="canonical" href="https://lakshminiranjan.com/">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/Professional-Space/favicon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/Professional-Space/favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/Professional-Space/favicon.png">
 
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    body {
+      margin: 0;
+      min-height: 100svh;
+      font-family: "Poppins", sans-serif;
+      background: radial-gradient(circle at top, #020617 0, #020617 45%, #020617);
+      color: #f9fafb;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    .launch-container {
+      max-width: 720px;
+      padding: 40px 24px;
+      text-align: center;
+      margin-top: 8vh;
+    }
+
+    /* PHOTO */
+    .launch-photo {
+      margin-bottom: 16px;
+    }
+
+    .photo-frame {
+      display: inline-flex;
+      padding: 4px;
+      border-radius: 22px;
+      background: linear-gradient(120deg, #60a5fa, #F3FFA3);
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.85);
+    }
+
+    .photo-frame img {
+      width: 240px;
+      height: 240px;
+      object-fit: cover;
+      border-radius: 18px;
+      background: #020617;
+      display: block;
+    }
+
+    /* HEADING */
+    .welcome-title {
+      font-size: 1.6rem;
+      font-weight: 600;
+      line-height: 1.45;
+      margin: 0 0 10px;
+      letter-spacing: 0.3px;
+    }
+
+    .name-highlight {
+      background: linear-gradient(120deg, #60a5fa, #F3FFA3);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 700;
+    }
+
+    .welcome-subtext {
+      font-size: 0.9rem;
+      color: #9ca3af;
+      margin-bottom: 26px;
+    }
+
+    /* CTA BUTTONS */
+    .cta-buttons {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      margin-bottom: 22px;
+    }
+
+    .cta-btn {
+      width: 170px;
+      padding: 11px 0;
+      font-size: 0.88rem;
+      font-weight: 500;
+      border-radius: 999px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+      background: linear-gradient(135deg, #0f172a, #020617);
+      color: #ffffff;
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.65);
+      border: 1.5px solid rgba(243, 255, 163, 0.55);
+    }
+
+    .cta-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 22px 46px rgba(15, 23, 42, 0.85);
+    }
+
+    /* DATE & QUOTE */
+    .date-text {
+      font-size: 0.78rem;
+      color: #cbd5f5;
+      margin-bottom: 6px;
+    }
+
+    /* ======= GLOW TEXT ONLY (NO BOX) ======= */
+.quote-text {
+  font-size: 0.95rem;
+  font-style: italic;
+  color: #e9d5ff; /* light lavender text */
+  margin-top: 12px;
+
+  text-shadow:
+    0 0 6px  rgba(168, 85, 247, 0.9),
+    0 0 14px rgba(34, 211, 238, 0.9),
+    0 0 28px rgba(168, 85, 247, 0.8),
+    0 0 46px rgba(34, 211, 238, 0.8);
+
+  animation: quoteGlow 2.4s ease-in-out infinite;
+}
+
+@keyframes quoteGlow {
+  0% {
+    text-shadow:
+      0 0 4px  rgba(168, 85, 247, 0.6),
+      0 0 10px rgba(34, 211, 238, 0.6),
+      0 0 20px rgba(168, 85, 247, 0.6),
+      0 0 36px rgba(34, 211, 238, 0.6);
+  }
+  50% {
+    text-shadow:
+      0 0 10px rgba(168, 85, 247, 1),
+      0 0 22px rgba(34, 211, 238, 1),
+      0 0 42px rgba(168, 85, 247, 1),
+      0 0 70px rgba(34, 211, 238, 1);
+  }
+  100% {
+    text-shadow:
+      0 0 4px  rgba(168, 85, 247, 0.6),
+      0 0 10px rgba(34, 211, 238, 0.6),
+      0 0 20px rgba(168, 85, 247, 0.6),
+      0 0 36px rgba(34, 211, 238, 0.6);
+  }
+}
+
+    /* MOBILE FIX */
+    @media (max-width: 520px) {
+      .launch-container {
+        margin-top: 6vh;
+      }
+
+      .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .cta-btn {
+        width: 100%;
+        max-width: 260px;
+        margin: 0 auto;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .welcome-title {
+        font-size: 1.3rem;
+      }
+
+      .photo-frame img {
+        width: 160px;
+        height: 160px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
+  <div class="launch-container">
+
+    <!-- PHOTO -->
+    <div class="launch-photo">
+      <div class="photo-frame">
+        <img src="Lak.jpg" alt="Lakshmi Niranjan">
+      </div>
+    </div>
+
+    <!-- WELCOME TEXT -->
+    <h1 class="welcome-title">
+      Hi, Welcome to
+      <span class="name-highlight">Lakshmi Niranjan</span>'s
+      Professional Space
+    </h1>
+
+    <div class="welcome-subtext">
+      Please select the profile that you would like to explore.
+    </div>
+
+    <!-- CTA BUTTONS -->
+    <div class="cta-buttons">
+      <a href="it-profile.html" class="cta-btn">IT Profile</a>
+      <a href="training.html" class="cta-btn">Training Profile</a>
+    </div>
+
+    <!-- DATE -->
+    <div class="date-text" id="todayDate"></div>
+
+    <!-- QUOTE -->
+    <div class="quote-text" id="dailyQuote"></div>
+
+  </div>
+
+  <!-- SCRIPT -->
+  <script>
+    window.addEventListener("DOMContentLoaded", () => {
+      const quotes = [
+        "The mind is everything. What you think you become.",
+        "When your prayers are not answered, remember: The teacher doesn’t talk during the test.",
+        "Thinking starts success, doing completes it.",
+        "Success is a journey, not a destination.",
+        "Influence grows when actions speak before words.",
+        "Time in the market beats timing the market.",
+        "Knowledge compounds faster than money.",
+        "Markets reward patience more than intelligence.",
+        "Clarity in thought leads to confidence in action.",
+        "In life, direction is more important than speed.",
+        "Happiness is a state of mind.",
+        "Trust the process, not the noise.",
+        "Your habits decide your future.",
+        "When life puts you in the dark, you are being planted—not buried."
+      ];
+
+      const startDate = new Date("2026-01-01");
+      const today = new Date();
+
+      startDate.setHours(0, 0, 0, 0);
+      today.setHours(0, 0, 0, 0);
+
+      const msPerDay = 1000 * 60 * 60 * 24;
+      const totalDaysPassed = Math.floor((today - startDate) / msPerDay);
+      const quoteIndex = totalDaysPassed % quotes.length;
+
+      const options = {
+        weekday: "long",
+        day: "numeric",
+        month: "long",
+        year: "numeric"
+      };
+
+      document.getElementById("todayDate").innerText =
+        today.toLocaleDateString("en-IN", options);
+
+      document.getElementById("dailyQuote").innerText =
+        `Quote of the day : “${quotes[quoteIndex]}”`;
+    });
+  </script>
+    <style>
+#chatbase-message-bubbles {
+  display: flex !important;
+}
+</style>
+<!-- Niru AI Chatbot -->
 <script>
-window.location.replace("/launchpage.html");
+(function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="sVqQ33eAXLGX9R0Ow3xx4";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
 </script>
-
 </body>
-
 </html>
